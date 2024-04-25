@@ -81,12 +81,15 @@ namespace Common.Helpers
 
         public const string EnableSeeder = "Enable_Seeder";
 
+
         // Smtp Settings
         public static string GetSmtpServerName() => GetSettingValue("Smtp", "ServerName");
         public static int GetSmtpServerPort() => int.Parse(GetSettingValue("Smtp", "ServerPort"));
         public static string GetSmtpEmailAddress() => GetSettingValue("Smtp", "EmailAddress");
         public static string GetSmtpEmailPassword() => GetSettingValue("Smtp", "EmailPassword");
         public static string GetSmtpEmailFrom() => GetSettingValue("Smtp", "EmailFrom");
+
+        public static string GetEncryptionKey() => GetSettingValue("EncryptionKey", "Key");
 
         public static string GetTwilioAccountSid() => GetSettingValue("Twilio", "AccountSid");
 
@@ -120,6 +123,7 @@ namespace Common.Helpers
         {
             return GetSettingValue(CustomSettings, JwtTokenSecret);
         }
+
 
         public static string GetJwtValueSecret()
         {
