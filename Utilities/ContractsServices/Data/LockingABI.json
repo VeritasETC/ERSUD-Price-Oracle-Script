@@ -1,0 +1,256 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "noCities",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "noDistricts",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "noMansions",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "noPlaymates",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "AddDetails",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "noRedchain",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "noBlackchain",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "noPlatinumchain",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "noscarlettoken",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "AddRlcDetails",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "ConfirmMinting",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "manager",
+        "type": "address"
+      }
+    ],
+    "name": "setManager",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "manager",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "getManager",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "manager",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "GetMintedUsersList",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserDetails",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "check",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isMinted",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noOfCities",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noOfDistricts",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noOfMansions",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noOfPlaymates",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct migrator.strdetails",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserRlcDetails",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isMinted",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noofRedchain",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noOfBlackchain",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noOfPlatinumchain",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "noOfScarletToken",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct migrator.rlcDetails",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "GetUsersList",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
