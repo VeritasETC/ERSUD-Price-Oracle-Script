@@ -23,9 +23,7 @@ internal class Program
             {
                 var rateService = serviceProvider.GetService<IRateService>();
                 await rateService.UpdateRate();
-                //Thread.Sleep(5 * 1000);
-                //await Task.Delay(TimeSpan.FromSeconds(5));
-                //Thread.Sleep(AppSettingHelper.GetSwapManagementDelayTimeInSeconds() * 1000);
+                await Task.Delay(TimeSpan.FromSeconds(5));
             }
             catch (Exception ex)
             {
