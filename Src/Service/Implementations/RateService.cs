@@ -75,10 +75,12 @@ namespace Service.Implementations
         {
             try
             {
-                var restClient = new BinanceRestClient();
-                var tickerResult = await restClient.SpotApi.ExchangeData.GetTickerAsync("ETCUSDT");
+                //var restClient = new BinanceRestClient();
+                //var tickerResult = await restClient.SpotApi.ExchangeData.GetTickerAsync("ETCUSDT");
 
-                if (tickerResult.Data.LastPrice == 0)
+                var data = await _repository.RateRepo.GetRate();
+
+                if (data.latestRate == 0)
                 {
                     return ServiceResults.Errors.Invalid<TransactionReceipt>("Rate", null);
                 }
@@ -89,7 +91,7 @@ namespace Service.Implementations
                                                                                                      contractAddress: AppSettingHelper.GetETHClassicSmartAddress(),
                                                                                                      ethClassicRate: new()
                                                                                                      {
-                                                                                                         amount = Web3.Convert.ToWei(tickerResult.Data.LastPrice),
+                                                                                                         amount = Web3.Convert.ToWei(data.latestRate),
                                                                                                      },
                                                                                                      UseLegacyAsDefault: true,
                                                                                                      cancellationToken: null);

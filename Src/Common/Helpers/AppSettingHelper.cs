@@ -88,9 +88,9 @@ namespace Common.Helpers
         public static string GetSmtpEmailAddress() => GetSettingValue("Smtp", "EmailAddress");
         public static string GetSmtpEmailPassword() => GetSettingValue("Smtp", "EmailPassword");
         public static string GetSmtpEmailFrom() => GetSettingValue("Smtp", "EmailFrom");
-
+        
         public static string GetEncryptionKey() => GetSettingValue("EncryptionKey", "Key");
-
+        
         public static string GetTwilioAccountSid() => GetSettingValue("Twilio", "AccountSid");
 
         public static string GetTwilioToken() => GetSettingValue("Twilio", "Token");
@@ -191,13 +191,39 @@ namespace Common.Helpers
         {
             return GetSettingValue("EthClassic", "EthClientNodeUrl");
         }
+
+
         public static string GetETHClassicSmartAddress()
         {
             return GetSettingValue("EthClassic", "SmartContractAddress");
         }
+
+        public static string GetOracleContractAddress()
+        {
+            return GetSettingValue("BSC", "OracleContract");
+        }
+
+        public static string GetVaultContractAddress()
+        {
+            return GetSettingValue("BSC", "VaultSmartContract");
+        }
+
+        public static string GetSwapContractAddress()
+        {
+            return GetSettingValue("BSC", "SwapSmartContract");
+        }
+        public static string GetLiquidationContractAddress()
+        {
+            return GetSettingValue("BSC", "LiquidationSmartContract");
+        }
         public static string GetETHClassicPrivateKey()
         {
             return GetSettingValue("EthClassic", "PrivateKey");
+        }
+
+        public static string GetBSCPrivateKey()
+        {
+            return GetSettingValue("BSC", "PrivateKey");
         }
         public static int GetETHClassicChainId()
         {

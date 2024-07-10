@@ -33,6 +33,8 @@
 
   <ItemGroup>
     <PackageReference Include="Binance.Net" Version="9.6.1" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.12" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.12" />
   </ItemGroup>
 
   <ItemGroup>

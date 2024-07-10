@@ -17,13 +17,15 @@ internal class Program
         var serviceProvider = services.BuildServiceProvider();
         Console.WriteLine("Script Started");
         Console.WriteLine(AppSettingHelper.GetDefaultConnection().Split(";")[0]);
+        int count = 0;
         while (true)
         {
             try
             {
                 var rateService = serviceProvider.GetService<IRateService>();
                 await rateService.UpdateRate();
-                await Task.Delay(TimeSpan.FromSeconds(5));
+                Console.WriteLine("({0}) Time: {1}", ++count, DateTime.Now);
+                Thread.Sleep(5 * 1000);
             }
             catch (Exception ex)
             {

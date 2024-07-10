@@ -9,6 +9,6 @@ namespace DTO.ViewModel
     public class UpdatePercentageRequest
     {
         public decimal Percentage { get; set; }
-        public string key { get; set; }
+        public string key {  get; set; }
     }
 }

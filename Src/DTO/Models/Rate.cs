@@ -11,5 +11,8 @@ namespace DTO.Models
         public decimal latestRate { get; set; }
         public decimal contractLatestRate { get; set; }
         public decimal Percentage { get; set; }
+        public int UpdateHour { get; set; }
+        public DateTime ContractUpdatedAt { get; set; }
+
     }
 }
